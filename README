@@ -1,0 +1,15 @@
+INTRO:
+
+This is a simple TCL templating system. I wrote it, because I had to create many colvar configuration fiiles in the molecular dynmics program NAMD (http://www.ks.uiuc.edu/Research/namd/).
+
+USEAGE:
+
+In your namd.conf file you have to add
+
+source templating.tcl
+
+Then you set the colvars config file using
+
+colvarsConfig   [fill_template TEMPLATE_FILE_NAME OUT_FILE_NAME]
+
+In the template all the variables defined in the namd conf file are accessible and are automatically replaced (you have to prefix them with a $, of course). You can also use flow control statements by prefiying the first line with %.

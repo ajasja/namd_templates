@@ -1,0 +1,20 @@
+colvar {
+  name CAO_theta
+
+  width 15.0
+  lowerboundary -180
+  upperboundary 180
+  lowerWallConstant 0.2
+  upperWallConstant 0.2
+
+  angle {
+    group1 { dummyAtom 0 0 1 }  
+    group2 { atomnumbers 202  } ;#CA
+    group3 { atomnumbers 204 }
+    group4 { atomnumbers 207 }
+  }
+}
+abf {
+  colvars chi1
+  fullSamples	10000
+}
